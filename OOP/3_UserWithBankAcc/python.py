@@ -16,7 +16,7 @@ class BankAccount:
             print("Insufficient Funds: Charging a $5 fee")
         return self
 
-    def display_account_info(self, name): # watch the video near the end to understand this
+    def display_account_info(self, name): 
         print("Name: {}, Balance: ${}".format(name, self.balance))
         return self
 
@@ -40,7 +40,7 @@ class User:
         return self
     
     def display_user_balance(self):
-        self.account.display_account_info(self.name) # watch the video near the end to understand this
+        self.account.display_account_info(self.name) 
         return self
     
     def transfer_money(self, other_user, amount):
