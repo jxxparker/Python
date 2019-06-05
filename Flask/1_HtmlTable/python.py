@@ -6,9 +6,9 @@ app = Flask(__name__)
 def index():
     all_users = (
    {'first_name' : 'Jihun', 'last_name' : 'Park'},
-   {'first_name' : 'John', 'last_name' : 'Supsupin'},
-   {'first_name' : 'Mark', 'last_name' : 'Guillen'},
-   {'first_name' : 'KB', 'last_name' : 'Tonel'}
+   {'first_name' : 'Kent', 'last_name' : 'Tse'},
+   {'first_name' : 'Kris', 'last_name' : 'Thai'},
+   {'first_name' : 'Kobe', 'last_name' : 'Bryant'}
 )
     return render_template("index.html", users=all_users)
 
