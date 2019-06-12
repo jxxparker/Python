@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Timedisplay app</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/style.css' %}" type="text/css">
+</head>
+<body>
+    <div class="wrapper">
+       
+        <!-- header div-->
+        <div class="header">
+            <h1> ~ Current Timee ~</h1>
+        </div>    
+        
+        <!--time div-->
+        <div class="timedisplay">
+            <!-- for date-->
+            
+            
+            <div class="date">
+                {{datetimes}} <!-- telling django this is date-->
+            </div>
+            <!-- for time-->
+            <div class="time">
+                {{time}}
+            </div>
+        </div>
+    
+    
+    </div>
+
+
+</body>
+</html>
