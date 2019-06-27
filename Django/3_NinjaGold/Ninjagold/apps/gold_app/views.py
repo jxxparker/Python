@@ -13,20 +13,26 @@ def index(request):
     return render(request , "goldtemplate/index.html")
 
 def process(request):
-    if request.method =="POST":
+    if request.method == "POST":
         if request.POST['hidden'] == 'farm':
             found = random.randrange(10,21)
-            request.session['action'].append("Ninja gained "+str(found)+" gold at the farm")
+            request.session['action'].append("You gained " + str(found)+ " gold at the farm")
             request.session['gold'] += found
             return redirect('/')
+        #------------------------#
         if request.POST['hidden'] == 'cave':
             found = random.randrange(5,11)
-            request.session['action'].append("Ninja gained "+str(found)+" gold at the cave")
+            request.session['action'].append("You gained " + str(found)+ " gold at the cave")
             request.session['gold'] += found
+            return redirect('/')
+        #------------------------#
         if request.POST['hidden'] == 'house':
             found = random.randrange(2,6)
-            request.session['action'].append("Ninja gained "+str(found)+" gold at the house")
+            request.session['action'].append("You gained " + str(found)+ " gold at the house")
             request.session['gold'] += found
+            return redirect('/')
+        #------------------------#
+        
         if request.POST['hidden'] == 'casino':
             check_win = random.randint(0, 1)
             if check_win == 1:

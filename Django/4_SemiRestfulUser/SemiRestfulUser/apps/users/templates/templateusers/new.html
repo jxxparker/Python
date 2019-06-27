@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'users/normalize.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'users/skeleton.css' %}" />
+    <title>New User</title>
+</head>
+<body class="container">
+    <div class="row">
+        <h1>Add a new user</h1>
+    </div>
+    <div class="row">
+        <form class="six columns" action="/users/create" method="POST">
+            {% csrf_token %}
+            <label class="u-full-width" for='first_name'>First Name:</label>
+            <input class="u-full-width" type="text" name="first_name">
+
+            <label class="u-full-width" for='Last_name'>Last Name:</label>
+            <input class="u-full-width" type="text" name="last_name">
+
+            <label class="u-full-width" for='email'>Email:</label>
+            <input class="u-full-width" type="text" name="email">
+
+            <input class="button-primary" type="submit" value="Create">
+        </form>
+    </div>
+    
+    <a href="/users">Go Back</a>
+</body>
+</html>
