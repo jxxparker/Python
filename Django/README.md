@@ -1,5 +1,6 @@
-Why Django?
+Introduction to Django
 Objectives:
-What is an MVC framework?
-What benefits would we gain by using an MVC or MTV framework?
+Learn about MVC
+Understand the benefits of an MVC/MTV framework
 Our strategy for covering Django
+Create a virtual environment for our Django projects
